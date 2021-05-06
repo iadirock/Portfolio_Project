@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+#created app for jobs in the below line
+    'jobs.apps.JobsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,6 +53,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
+
+#to tell django where our media should be saved
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#if someone accesses the image then where it should go
+MEDIA_URL = '/media/'
 
 TEMPLATES = [
     {
