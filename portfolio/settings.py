@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
 #created app for jobs in the below line
     'jobs.apps.JobsConfig',
+    'blogs.apps.BlogsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
