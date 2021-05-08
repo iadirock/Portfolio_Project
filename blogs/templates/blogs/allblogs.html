@@ -80,14 +80,20 @@
             <h2>Latest Blogs</h2>
             <!-- hr is used for showing a line -->
             <hr/>
+            <!-- Added style to remove the underline from the a tags-->
+            <style>
+                #GFG {
+                    text-decoration: none;
+                }
+            </style>
             {% for blog in blogs.all %}
             <!-- a href used for anchor tag-->
-                <a href=""><h3>{{ blog.title }}</h3></a>
-                {{ blog.pub_date}}
+                <a id = "GFG" href=""><h3>{{ blog.title }}</h3></a>
+                {{ blog.pub_date_new}}
                 <br/>
                 <img class="img-fluid" src="{{ blog.image.url }}" height="200" width="200"/>
                 <br/>
-                <p>{{ blog.body}}</p>
+                <p>{{ blog.summary}}</p>
             {% endfor %}
         </div>
     </main>
