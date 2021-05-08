@@ -14,7 +14,7 @@ class Blog(models.Model):
 
     #Creating function to show only 100 chars of the body
     def summary(self):
-        return self.body[:100]
+        return self.body[:100] + "..."
 
     #creating function to show preferred format of date
     def pub_date_new(self):
