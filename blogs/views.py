@@ -6,7 +6,8 @@ from .models import Blog
 def allblogs(request):
     #to get objects from db and turn them into python objects
     blogs = Blog.objects
-    return render(request, 'blogs/allblogs.html', {'blogs':blogs})
+    ordered_blogs = Blog.objects.order_by('-pub_date')
+    return render(request, 'blogs/allblogs.html', {'blogs':ordered_blogs})
 
 #creating a function to show detailed version of blog
 def detail(request, blog_id):
